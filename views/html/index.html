@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Socket.IO chat</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <aside>
+        <header>
+          <input type="text" placeholder="아이디입력" />
+        </header>
+        <ul>
+          <li>
+            <img
+              src="/source/avatar2.svg" style="width: 55px;"
+              alt="" />
+            <div>
+              <h2>정창일</h2>
+              <h3>
+                <span class="status orange"></span>
+                offline
+              </h3>
+            </div>
+          </li>
+        </ul>
+      </aside>
+      <main>
+        <header>
+          <img
+            src="/source/avatar2.svg" style="width: 50px;"
+            alt="" />
+          <div>
+            <h2>너무 졸린 시간이다</h2>
+            <h3>총 0,000 개의 message</h3>
+          </div>
+          <img
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_star.png"
+            alt="" />
+        </header>
+        <ul id="chat">
+          <li class="you">
+            <div class="entete">
+              <span class="status green"></span>
+              <h2>다른누군가의id</h2>
+              <h3>10:12AM, Today</h3>
+            </div>
+            <div class="triangle"></div>
+            <div class="message">
+              싸늘하다 가슴에 비수가날아와 꽃힌다 뭔가 안해두면 중대장님이 화날거같다 근데 졸리다
+            </div>
+          </li>
+          <li class="me">
+            <div class="entete">
+              <h3>10:12AM, Today</h3>
+              <h2>정창일</h2>
+              <span class="status blue"></span>
+            </div>
+            <div class="triangle"></div>
+            <div class="message">
+              백앤드까지 만들어야 소켓의 완성이다 일단 이 화면을 채우도록 하자
+            </div>
+          </li>
+        </ul>
+        <footer>
+          <input id="input" placeholder="Type your message"></input>
+          <div></div>
+          <div></div>
+          <a id="form" href="#">Send</a>
+        </footer>
+      </main>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/main.js"></script>
+
+  </body>
+</html>
