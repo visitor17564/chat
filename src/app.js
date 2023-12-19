@@ -15,6 +15,7 @@ app.use(express.static("./views"));
 
 io.on("connection", (socket) => {
   console.log(`New WebSocket ${socket.id} connected`);
+
   socket.on("join", (options, callback) => {
     console.log("options, callback", options, callback);
     const { error, user } = addUser({ id: socket.id, ...options });

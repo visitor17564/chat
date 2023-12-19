@@ -1,18 +1,27 @@
 const socket = io();
 
 const form = document.getElementById("form");
-console.log(form);
 const input = document.getElementById("input");
-console.log(input);
-
 const messages = document.getElementById("chat");
-console.log(messages);
+const join = document.getElementById("join");
 
-form.addEventListener("click", (e) => {
+// 메시지 전송 함수
+function sendMessage(e) {
   e.preventDefault();
   if (input.value) {
     socket.emit("chat message", input.value);
     input.value = "";
+  }
+}
+
+// send가 클릭되거나 엔터카 쳐졌을 때 작동
+form.addEventListener("click", (e) => {
+  sendMessage(e);
+});
+input.addEventListener("keydown", (e) => {
+  console.log(e.keyCode);
+  if (e.keyCode === 13 || e.which === 13) {
+    sendMessage(e);
   }
 });
 

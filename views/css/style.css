@@ -32,9 +32,10 @@ main {
 
 aside header {
   padding: 30px 20px;
+  display: inline-flex;
 }
 aside input {
-  width: 100%;
+  width: 82%;
   height: 50px;
   line-height: 50px;
   padding: 0 50px 0 20px;
@@ -42,7 +43,6 @@ aside input {
   border: none;
   border-radius: 3px;
   color: #fff;
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_search.png);
   background-repeat: no-repeat;
   background-position: 170px;
   background-size: 40px;
